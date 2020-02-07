@@ -17,7 +17,7 @@ class Plugin extends PluginBase
         'Waka.ImportExport',
         'Waka.Cloudis',
         'Waka.Informer',
-        ];
+    ];
     /**
      * Returns information about this plugin.
      *
@@ -26,10 +26,10 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'Wcms',
-            'description' => 'No description provided yet...',
-            'author'      => 'Waka',
-            'icon'        => 'icon-leaf'
+            'name' => 'Wcms',
+            'description' => 'No description provided yet....',
+            'author' => 'Waka',
+            'icon' => 'icon-leaf',
         ];
     }
 
@@ -50,9 +50,9 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-        \Waka\Publisher\Controllers\Documents::extend(function($controller) {
+        \Waka\Publisher\Controllers\Documents::extend(function ($controller) {
             $controller->implement[] = 'Waka.Wcms.Contents.ContentListNeed';
-    });
+        });
 
     }
 
@@ -82,7 +82,7 @@ class Plugin extends PluginBase
         return [
             'waka.wcms.some_permission' => [
                 'tab' => 'Wcms',
-                'label' => 'Some permission'
+                'label' => 'Some permission',
             ],
         ];
     }
@@ -96,18 +96,18 @@ class Plugin extends PluginBase
     {
         return [
             'wcms' => [
-                'label'       => 'waka.wcms::lang.menu.wcms',
-                'url'         => Backend::url('waka/wcms/needs'),
-                'icon'        => 'icon-newspaper-o',
+                'label' => 'waka.wcms::lang.menu.wcms',
+                'url' => Backend::url('waka/wcms/needs'),
+                'icon' => 'icon-newspaper-o',
                 'permissions' => ['waka.wcms.*'],
-                'order'       => 2,
+                'order' => 2,
                 'sideMenu' => [
                     'side-menu-needs' => [
-                        'label'       => Lang::get('waka.wcms::lang.menu.needs'),
-                        'icon'        => 'icon-university',
-                        'url'         => Backend::url('waka/wcms/needs'),
+                        'label' => Lang::get('waka.wcms::lang.menu.needs'),
+                        'icon' => 'icon-university',
+                        'url' => Backend::url('waka/wcms/needs'),
                     ],
-                ]
+                ],
             ],
         ];
     }

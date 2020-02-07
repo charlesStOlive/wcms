@@ -1,6 +1,7 @@
 <?php namespace Waka\Wcms\Updates;
 
 use Db;
+use Excel;
 use Seeder;
 
 class SeedTables extends Seeder

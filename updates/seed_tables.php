@@ -1,5 +1,6 @@
 <?php namespace Waka\Wcms\Updates;
 
+use Db;
 use Seeder;
 
 class SeedTables extends Seeder

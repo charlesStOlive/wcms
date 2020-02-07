@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Need
+
+# Model Form Field configuration
+form: $/waka/wcms/models/need/fields.yaml
+
+# Model Class name
+modelClass: Waka\Wcms\Models\Need
+
+# Default redirect location
+defaultRedirect: waka/wcms/needs
+
+# Create page
+create:
+    title: Create Need
+    redirect: waka/wcms/needs/update/:id
+    redirectClose: waka/wcms/needs
+
+# Update page
+update:
+    title: Edit Need
+    redirect: waka/wcms/needs
+    redirectClose: waka/wcms/needs
+
+# Preview page
+preview:
+    title: Preview Need

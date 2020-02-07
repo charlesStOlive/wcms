@@ -1,0 +1,47 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: waka.wcms::lang.need.name
+        span: auto
+    slug:
+        label: waka.utils::lang.global.slug
+        preset: name
+        span: auto
+    intro:
+        label: waka.wcms::lang.need.intro
+        span: auto
+    catchline:
+        label: waka.wcms::lang.need.catchline
+        span: auto
+    # icone:
+    #     label: waka.wcms::lang.need.icone
+    #     type:
+    #     span: full
+    main_image: 
+        label: waka.wcms::lang.need.catchline
+        type: fileupload
+        mode: image
+        thumbOptions:
+            mode: fit
+        imageWidth: 300
+        imageHeight: 150
+        useCaption: false
+
+    description:
+        label: waka.wcms::lang.need.description
+        type: markdown
+        mode: split
+    # description2:
+    #     label: waka.wcms::lang.need.description2
+    #     type: markdown
+    #     mode: split
+    #     size: huge
+    # kpi:
+    #     label: waka.wcms::lang.need.kpi
+    #     type: markdown
+    #     size: huge
+    
+    

@@ -1,0 +1,22 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    sector:
+        label: waka.wcms::lang.listneed.sector
+        type: dropdown
+        options: listNestedSector
+    data: 
+        type: nestedform
+        usePanelStyles: false
+        form:
+            fields:
+                show_comment:
+                    label: show_comment
+                    type: checkbox
+                    default: true
+
+            
+
+

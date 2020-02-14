@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Solution
+
+# Model Form Field configuration
+form: $/waka/wcms/models/solution/fields.yaml
+
+# Model Class name
+modelClass: Waka\Wcms\Models\Solution
+
+# Default redirect location
+defaultRedirect: waka/wcms/solutions
+
+# Create page
+create:
+    title: Create Solution
+    redirect: waka/wcms/solutions/update/:id
+    redirectClose: waka/wcms/solutions
+
+# Update page
+update:
+    title: Edit Solution
+    redirect: waka/wcms/solutions
+    redirectClose: waka/wcms/solutions
+
+# Preview page
+preview:
+    title: Preview Solution

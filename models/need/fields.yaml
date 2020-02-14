@@ -21,7 +21,7 @@ fields:
     #     type:
     #     span: full
     main_image: 
-        label: waka.wcms::lang.need.catchline
+        label: waka.wcms::lang.need.main_image
         type: fileupload
         mode: image
         thumbOptions:
@@ -29,11 +29,24 @@ fields:
         imageWidth: 300
         imageHeight: 150
         useCaption: false
+    
+    solutions:
+        label: waka.wcms::lang.need.linked_solutions
+        type: taglist
+        mode: relation
+        select: name
 
     description:
         label: waka.wcms::lang.need.description
         type: markdown
         mode: split
+    
+    content:
+        label: waka.wcms::lang.need.description
+        prompt: Contenu
+        type: repeater
+        groups: $/waka/wcms/models/config/repeater_fields.yaml
+
     # description2:
     #     label: waka.wcms::lang.need.description2
     #     type: markdown

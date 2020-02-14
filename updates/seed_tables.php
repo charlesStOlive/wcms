@@ -10,6 +10,10 @@ class SeedTables extends Seeder
     {
         Db::table('waka_wcms_needs')->truncate();
         Excel::import(new \Waka\Wcms\Classes\Imports\NeedImport, plugins_path('waka/wcms/updates/excels/start_needs.xlsx'));
+
+        Db::table('waka_wcms_solutions')->truncate();
+        Excel::import(new \Waka\Wcms\Classes\Imports\SolutionImport, plugins_path('waka/wcms/updates/excels/start_solutions.xlsx'));
+
     }
 
 }

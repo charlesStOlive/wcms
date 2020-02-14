@@ -107,6 +107,11 @@ class Plugin extends PluginBase
                         'icon' => 'icon-university',
                         'url' => Backend::url('waka/wcms/needs'),
                     ],
+                    'side-menu-solutions' => [
+                        'label' => Lang::get('waka.wcms::lang.menu.solutions'),
+                        'icon' => 'icon-crosshairs',
+                        'url' => Backend::url('waka/wcms/solutions'),
+                    ],
                 ],
             ],
         ];

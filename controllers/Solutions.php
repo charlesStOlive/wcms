@@ -4,16 +4,15 @@ use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
- * Needs Back-end Controller
+ * Solutions Back-end Controller
  */
-class Needs extends Controller
+class Solutions extends Controller
 {
     public $implement = [
         'Backend.Behaviors.FormController',
         'Backend.Behaviors.ListController',
         'Waka.Utils.Behaviors.DuplicateModel',
         'Waka.ImportExport.Behaviors.ExcelImport',
-        'Waka.ImportExport.Behaviors.ExcelExport',
         'Backend.Behaviors.ReorderController',
 
     ];
@@ -28,6 +27,6 @@ class Needs extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Waka.Wcms', 'wcms', 'needs');
+        BackendMenu::setContext('Waka.Wcms', 'wcms', 'solutions');
     }
 }

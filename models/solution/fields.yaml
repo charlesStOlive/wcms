@@ -1,0 +1,28 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: waka.wcms::lang.solution.name
+    slug:
+        label: waka.utils::lang.global.slug
+        preset: name
+
+    main_image: 
+        label: waka.wcms::lang.solution.main_image
+        type: fileupload
+        mode: image
+        thumbOptions:
+            mode: fit
+        imageWidth: 300
+        imageHeight: 150
+        useCaption: false
+    
+    solutions:
+        label: waka.wcms::lang.solution.linked_needs
+
+    description:
+        label: waka.wcms::lang.solution.description
+        type: markdown
+        mode: split

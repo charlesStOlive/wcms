@@ -3,22 +3,17 @@
 use Model;
 
 /**
- * Need Model
+ * Solution Model
  */
-class Need extends Model
+class Solution extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    use \October\Rain\Database\Traits\SoftDelete;
     use \October\Rain\Database\Traits\Sortable;
-
-    use \Waka\Cloudis\Classes\Traits\CloudiTrait;
-    public $cloudiSlug = 'slug';
-    public $cloudiImages = ['main_image'];
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'waka_wcms_needs';
+    public $table = 'waka_wcms_solutions';
 
     /**
      * @var array Guarded fields
@@ -43,7 +38,7 @@ class Need extends Model
     /**
      * @var array Attributes to be cast to JSON
      */
-    protected $jsonable = ['content'];
+    protected $jsonable = [];
 
     /**
      * @var array Attributes to be appended to the API representation of the model (ex. toArray())
@@ -61,7 +56,6 @@ class Need extends Model
     protected $dates = [
         'created_at',
         'updated_at',
-        'deleted_at',
     ];
 
     /**
@@ -71,29 +65,13 @@ class Need extends Model
     public $hasMany = [];
     public $belongsTo = [];
     public $belongsToMany = [
-        'solutions' => ['Waka\Wcms\Models\Solution', 'table' => 'waka_wcms_needs_solutions'],
+        'needs' => ['Waka\Wcms\Models\Need', 'table' => 'waka_wcms_needs_solutions'],
     ];
     public $morphTo = [];
     public $morphOne = [];
-    public $morphMany = [
-        'cloudis_files' => [
-            'Waka\Cloudis\Models\CloudisFile',
-            'name' => 'cloudeable',
-        ],
-    ];
+    public $morphMany = [];
     public $attachOne = [
         'main_image' => 'System\Models\File',
     ];
     public $attachMany = [];
-
-    public function afterSave()
-    {
-        $this->checkModelCloudisFilesChanges();
-        $this->updateCloudiRelations('attach');
-    }
-    public function afterDelete()
-    {
-        //trace_log("afterDelete");
-        $this->clouderDeleteAll();
-    }
 }

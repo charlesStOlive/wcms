@@ -50,9 +50,9 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-        \Waka\Publisher\Controllers\Documents::extend(function ($controller) {
-            $controller->implement[] = 'Waka.Wcms.Contents.ContentListNeed';
-        });
+        // \Waka\Publisher\Controllers\Documents::extend(function ($controller) {
+        //     $controller->implement[] = 'Waka.Wcms.Contents.ContentListNeed';
+        // });
 
     }
 

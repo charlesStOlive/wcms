@@ -19,8 +19,11 @@ fields:
         imageHeight: 150
         useCaption: false
     
-    solutions:
+    needs:
         label: waka.wcms::lang.solution.linked_needs
+        type: taglist
+        mode: relation
+        select: name
 
     description:
         label: waka.wcms::lang.solution.description

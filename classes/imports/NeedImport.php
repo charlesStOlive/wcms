@@ -31,15 +31,15 @@ class NeedImport implements ToCollection, WithHeadingRow
             $need->save();
             //traitement des liaison
             $row_solutions = explode(',', $row['solutions']);
-            trace_log('modelSolutions');
-            trace_log($modelSolutions);
+            //trace_log('modelSolutions');
+            //trace_log($modelSolutions);
             foreach ($row_solutions as $slug) {
-                trace_log('slug : ' . $slug);
+                //trace_log('slug : ' . $slug);
                 $solution_id = $modelSolutions[trim($slug)] ?? null;
                 if ($solution_id) {
                     $need->solutions()->attach(Solution::find($solution_id));
                 } else {
-                    trace_log("ce slug : " . $slug . " n'a pas été trouvé");
+                    //trace_log("ce slug : " . $slug . " n'a pas été trouvé");
                 }
             }
             //fin du traitement des liaisons

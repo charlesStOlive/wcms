@@ -10,6 +10,13 @@ fields:
         label: waka.utils::lang.global.slug
         preset: name
         span: auto
+    state:
+        label: waka.utils::lang.global.state
+        type: balloon-selector
+        options:
+            draft: Brouillon
+            noPage: Pas de page
+            ready: Prêt
     intro:
         label: waka.wcms::lang.need.intro
         span: auto

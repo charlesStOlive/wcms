@@ -30,6 +30,33 @@ text_image:
             mode: image
             imageHeight: 100
             imageWidth: 300
+text_svg:
+    name: waka.wcms::lang.repeater.text_svg.name
+    description: waka.wcms::lang.repeater.text_svg.description
+    icon: icon-address-card-o
+    fields:
+        title:
+            label: waka.wcms::lang.repeater.text_svg.title
+        text:
+            label: waka.wcms::lang.repeater.text_svg.text
+            type: richeditor
+            toolbarButtons: bold|italic
+            span: auto
+        size_text:
+            label: waka.wcms::lang.repeater.text_svg.size_text
+            default: w-1/2
+        size_svg:
+            label: waka.wcms::lang.repeater.text_svg.size_svg
+            default: w-1/2
+        svg:
+            label: waka.wcms::lang.repeater.text_svg.svg
+        type:
+            label: waka.wcms::lang.repeater.text_svg.image
+            type: checkboxList
+            options:
+                col: Colonne
+                raw: Raw
+
 vimeo:
     name: waka.wcms::lang.repeater.vimeo.name
     description: waka.wcms::lang.repeater.vimeo.description

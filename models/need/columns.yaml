@@ -11,6 +11,10 @@ columns:
     name:
         label: waka.wcms::lang.need.name
         searchable: true
+
+    state:
+        label: waka.utils::lang.global.state
+        
     updated_at:
         label: waka.utils::lang.global.updated_at
         type: timetense

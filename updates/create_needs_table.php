@@ -15,6 +15,7 @@ class CreateNeedsTable extends Migration
             $table->string('slug');
             $table->string('intro')->nullable();
             $table->string('catchline')->nullable();
+            $table->string('state')->default('draft');
             $table->text('description')->nullable();
             $table->text('content')->nullable();
             $table->text('kpi')->nullable();

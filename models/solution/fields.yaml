@@ -5,9 +5,18 @@
 fields:
     name:
         label: waka.wcms::lang.solution.name
+        span: auto
     slug:
         label: waka.utils::lang.global.slug
         preset: name
+        span: auto
+    state:
+        label: waka.utils::lang.global.state
+        type: balloon-selector
+        options:
+            draft: Brouillon
+            noPage: Pas de page
+            ready: Prêt
 
     main_image: 
         label: waka.wcms::lang.solution.main_image

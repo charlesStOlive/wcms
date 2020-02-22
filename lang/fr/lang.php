@@ -41,6 +41,14 @@ return [
             'text' => "Text",
             'image' => "Image",
         ],
+        'text_svg' => [
+            'name' => "Texte & SVG",
+            'description' => "Un titre, un texte et un SVG du thème",
+            'title' => "Titre",
+            'text' => "Text",
+            'svg' => "SVG",
+            'type' => "SVG",
+        ],
         'vimeo' => [
             'name' => "Vidéo vimeo",
             'description' => "Une video",

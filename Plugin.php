@@ -77,12 +77,22 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
-
         return [
-            'waka.wcms.some_permission' => [
-                'tab' => 'Wcms',
-                'label' => 'Some permission',
+            'waka.wcms.user.admin' => [
+                'tab' => 'Waka CMS',
+                'label' => 'Administrateur de WCMS',
+            ],
+            'waka.wcms.user.manager' => [
+                'tab' => 'Waka CMS',
+                'label' => 'Manager de WCMS',
+            ],
+            'waka.wcms.user' => [
+                'tab' => 'Waka CMS',
+                'label' => 'Utilisateur de WCMS',
+            ],
+            'waka.wcms.reader' => [
+                'tab' => 'Waka CMS',
+                'label' => 'Peut lire mais pas modifier WCMS',
             ],
         ];
     }

@@ -9,6 +9,7 @@ class Solution extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\Sortable;
+    use \Waka\Cloudis\Classes\Traits\CloudiTrait;
 
     /**
      * @var string The database table used by the model.
@@ -71,7 +72,17 @@ class Solution extends Model
     public $morphOne = [];
     public $morphMany = [];
     public $attachOne = [
-        'main_image' => 'System\Models\File',
+        'main_image' => 'Waka\Cloudis\Models\CloudiFile',
     ];
     public $attachMany = [];
+
+    public function afterSave()
+    {
+        $this->updateCloudiRelations('attach');
+    }
+    public function afterDelete()
+    {
+        //trace_log("afterDelete");
+        $this->clouderDeleteAll();
+    }
 }

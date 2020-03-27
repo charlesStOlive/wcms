@@ -10,10 +10,7 @@ class Need extends Model
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\SoftDelete;
     use \October\Rain\Database\Traits\Sortable;
-
     use \Waka\Cloudis\Classes\Traits\CloudiTrait;
-    public $cloudiSlug = 'slug';
-    public $cloudiImages = ['main_image'];
 
     /**
      * @var string The database table used by the model.
@@ -82,13 +79,12 @@ class Need extends Model
         ],
     ];
     public $attachOne = [
-        'main_image' => 'System\Models\File',
+        'main_image' => 'Waka\Cloudis\Models\CloudiFile',
     ];
     public $attachMany = [];
 
     public function afterSave()
     {
-        $this->checkModelCloudisFilesChanges();
         $this->updateCloudiRelations('attach');
     }
     public function afterDelete()

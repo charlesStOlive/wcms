@@ -35,6 +35,11 @@ fields:
         select: name
 
     description:
-        label: waka.wcms::lang.solution.description
-        type: markdown
-        mode: split
+        label: waka.wcms::lang.need.description
+        type: textarea
+
+    description_html:
+        label: waka.wcms::lang.need.description_html
+        type: richeditor
+        
+        

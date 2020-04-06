@@ -45,11 +45,14 @@ fields:
 
     description:
         label: waka.wcms::lang.need.description
-        type: markdown
-        mode: split
+        type: textarea
+
+    description_html:
+        label: waka.wcms::lang.need.description_html
+        type: richeditor
     
     content:
-        label: waka.wcms::lang.need.description
+        label: waka.wcms::lang.need.content
         prompt: Contenu
         type: repeater
         groups: $/waka/wcms/models/config/repeater_fields.yaml

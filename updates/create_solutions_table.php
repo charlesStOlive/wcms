@@ -14,6 +14,7 @@ class CreateSolutionsTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->text('description')->nullable();
+            $table->text('description_html')->nullable();
             $table->string('state')->default('draft');
             $table->text('content')->nullable();
             $table->integer('sort_order')->default(0);

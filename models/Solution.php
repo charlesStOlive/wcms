@@ -49,7 +49,11 @@ class Solution extends Model
     /**
      * @var array Attributes to be removed from the API representation of the model (ex. toArray())
      */
-    protected $hidden = [];
+    protected $hidden = [
+        'deleted_at',
+        'content',
+        'sort_order',
+    ];
 
     /**
      * @var array Attributes to be cast to Argon (Carbon) instances

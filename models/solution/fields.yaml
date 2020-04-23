@@ -20,13 +20,10 @@ fields:
 
     main_image: 
         label: waka.wcms::lang.solution.main_image
-        type: fileupload
+        type: cloudifileupload
         mode: image
-        thumbOptions:
-            mode: fit
-        imageWidth: 300
+        imageWidth: 150
         imageHeight: 150
-        useCaption: false
     
     needs:
         label: waka.wcms::lang.solution.linked_needs

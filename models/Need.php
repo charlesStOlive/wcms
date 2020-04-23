@@ -76,12 +76,7 @@ class Need extends Model
     ];
     public $morphTo = [];
     public $morphOne = [];
-    public $morphMany = [
-        'cloudis_files' => [
-            'Waka\Cloudis\Models\CloudisFile',
-            'name' => 'cloudeable',
-        ],
-    ];
+    public $morphMany = [];
     public $attachOne = [
         'main_image' => 'Waka\Cloudis\Models\CloudiFile',
     ];

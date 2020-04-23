@@ -29,13 +29,10 @@ fields:
     #     span: full
     main_image: 
         label: waka.wcms::lang.need.main_image
-        type: fileupload
+        type: cloudifileupload
         mode: image
-        thumbOptions:
-            mode: fit
-        imageWidth: 300
         imageHeight: 150
-        useCaption: false
+        imageWidth: 300
     
     solutions:
         label: waka.wcms::lang.need.linked_solutions

@@ -61,6 +61,13 @@ return [
             'id' => "ID de la vidéo",
             'bg' => "Background",
         ],
+        'cloudi_video' => [
+            'name' => "Vidéo cloudi",
+            'description' => "Une video hébergé sur le compte cloudi",
+            'title' => "Titre",
+            'id' => "URL de la vidéo",
+            'bg' => "Background",
+        ],
         'carousel' => [
             'name' => "Un carousel",
             'description' => "Carousel avec titre",

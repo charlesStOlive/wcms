@@ -76,7 +76,7 @@ text_svg:
 vimeo:
     name: waka.wcms::lang.repeater.vimeo.name
     description: waka.wcms::lang.repeater.vimeo.description
-    icon: icon-file-text-o
+    icon: icon-file-video-o
     fields:
         group_section: 
             type: section
@@ -89,6 +89,22 @@ vimeo:
         # bg: 
         #     label: waka.wcms::lang.repeater.vimeo.bg
 
+cloudi_video:
+    name: waka.wcms::lang.repeater.cloudi_video.name
+    description: waka.wcms::lang.repeater.cloudi_video.description
+    icon: icon-file-video-o
+    fields:
+        group_section: 
+            type: section
+            label: waka.wcms::lang.repeater.cloudi_video.name
+            comment: waka.wcms::lang.repeater.cloudi_video.description
+        title: 
+            label: waka.wcms::lang.repeater.cloudi_video.title
+        url: 
+            label: waka.wcms::lang.repeater.cloudi_video.id
+        # bg: 
+        #     label: waka.wcms::lang.repeater.vimeo.bg
+
 carousel:
     name: waka.wcms::lang.repeater.carousel.name
     description: waka.wcms::lang.repeater.carousel.description
@@ -98,6 +114,9 @@ carousel:
             type: section
             label: waka.wcms::lang.repeater.carousel.name
             comment: waka.wcms::lang.repeater.carousel.description
+        title:
+            label: waka.wcms::lang.repeater.carousel_text.title
+            span: auto
         carousel:
             type: repeater
             prompt: waka.wcms::lang.repeater.carousel.prompt

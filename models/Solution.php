@@ -39,7 +39,7 @@ class Solution extends Model
     /**
      * @var array Attributes to be cast to JSON
      */
-    protected $jsonable = [];
+    protected $jsonable = ['content'];
 
     /**
      * @var array Attributes to be appended to the API representation of the model (ex. toArray())
@@ -51,7 +51,6 @@ class Solution extends Model
      */
     protected $hidden = [
         'deleted_at',
-        'content',
         'sort_order',
     ];
 

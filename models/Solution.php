@@ -8,7 +8,7 @@ use Model;
 class Solution extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    use \October\Rain\Database\Traits\Sortable;
+    use \October\Rain\Database\Traits\NestedTree;
     use \Waka\Cloudis\Classes\Traits\CloudiTrait;
 
     /**

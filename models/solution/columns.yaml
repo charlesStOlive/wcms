@@ -3,11 +3,6 @@
 # ===================================
 
 columns:
-    
-    sort_order:
-        label: waka.utils::lang.global.sort_order
-        invisible: true
-    
     name:
         label: waka.wcms::lang.solution.name
         searchable: true

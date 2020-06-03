@@ -17,7 +17,11 @@ class CreateSolutionsTable extends Migration
             $table->text('description_html')->nullable();
             $table->string('state')->default('draft');
             $table->text('content')->nullable();
-            $table->integer('sort_order')->default(0);
+            $table->integer('parent_id')->nullable();
+            $table->integer('nest_left')->nullable();
+            $table->integer('nest_right')->nullable();
+            $table->integer('nest_depth')->nullable();
+
             $table->timestamps();
         });
     }

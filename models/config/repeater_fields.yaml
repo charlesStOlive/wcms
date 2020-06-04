@@ -17,6 +17,14 @@ text:
             size: tiny
             span: auto
 
+partial:
+    name: waka.wcms::lang.repeater.partial.name
+    description: waka.wcms::lang.repeater.partial.description
+    icon: icon-tags
+    fields:
+        partial: 
+            label: waka.wcms::lang.repeater.partial.partial
+
 
 text_image:
     name: waka.wcms::lang.repeater.text_image.name

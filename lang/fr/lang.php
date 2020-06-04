@@ -37,6 +37,11 @@ return [
             'title' => "Titre",
             'text' => "Text",
         ],
+        'partial' => [
+            'name' => "Un modèle partiel",
+            'description' => "Un modèle partiel existant dans le thèmes",
+            'partial' => "Nom du partial",
+        ],
         'text_image' => [
             'name' => "2 colonnes, text + image",
             'description' => "Un bloc de texte avec une colonne image",

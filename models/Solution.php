@@ -88,4 +88,13 @@ class Solution extends Model
         //trace_log("afterDelete");
         $this->clouderDeleteAll();
     }
+
+    public function getRapidLinksAttribute() {
+        $link = [
+            "name" => "Page Web",
+            "href" => url('solution/' . $this->slug),
+            "target" => "_blank"
+        ];
+        return [$link];
+    }
 }

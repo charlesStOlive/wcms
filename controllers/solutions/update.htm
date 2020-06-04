@@ -39,6 +39,7 @@
                     <?= e(trans('waka.utils::lang.global.save_close')) ?>
                 </button>
                                 <?= $this->fireViewEvent('backend.down.update') ?>
+                                <?= $this->fireViewEvent('backend.down.rapidLinks') ?>
                                 <button
                     type="button"
                     class="oc-icon-trash-o btn-icon danger pull-right"

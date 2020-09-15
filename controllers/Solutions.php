@@ -13,6 +13,7 @@ class Solutions extends Controller
         'Backend.Behaviors.ListController',
         'Waka.Utils.Behaviors.DuplicateModel',
         'Waka.ImportExport.Behaviors.ExcelImport',
+        'Waka.ImportExport.Behaviors.ExcelExport',
         'Backend.Behaviors.ReorderController',
 
     ];

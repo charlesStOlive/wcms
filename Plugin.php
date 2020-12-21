@@ -110,7 +110,7 @@ class Plugin extends PluginBase
                 'url' => Backend::url('waka/wcms/needs'),
                 'icon' => 'icon-newspaper-o',
                 'permissions' => ['waka.wcms.*'],
-                'order' => 2,
+                'order' => 10,
                 'sideMenu' => [
                     'side-menu-needs' => [
                         'label' => Lang::get('waka.wcms::lang.menu.needs'),

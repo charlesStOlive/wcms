@@ -81,14 +81,4 @@ class Need extends Model
         'main_image' => 'Waka\Cloudis\Models\CloudiFile',
     ];
     public $attachMany = [];
-
-    public function afterSave()
-    {
-        $this->updateCloudiRelations('attach');
-    }
-    public function afterDelete()
-    {
-        //trace_log("afterDelete");
-        $this->clouderDeleteAll();
-    }
 }

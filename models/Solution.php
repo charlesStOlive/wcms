@@ -91,7 +91,7 @@ class Solution extends Model
     public $belongsTo = [
     ];
     public $belongsToMany = [
-        'solutions' => ['Waka\Wcms\Models\Solution', 'table' => 'waka_wcms_needs_solutions'],
+        'needs' => ['Waka\Wcms\Models\Need', 'table' => 'waka_wcms_needs_solutions'],
     ];
     public $morphTo = [];
     public $morphOne = [

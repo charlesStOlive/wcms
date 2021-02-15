@@ -41,6 +41,12 @@ fields:
         mode: image
         imageHeight: 100
         imageWidth: 260
+    solutions:
+        label: waka.wcms::need.solutions
+        span: full
+        type: taglist
+        mode: relation
+        select: name
     content:
         label: waka.wcms::need.content
         span: full

@@ -90,7 +90,7 @@ class Need extends Model
     public $belongsTo = [
     ];
     public $belongsToMany = [
-        'needs' => ['Waka\Wcms\Models\Need', 'table' => 'waka_wcms_needs_solutions'],
+        'solutions' => ['Waka\Wcms\Models\Solution', 'table' => 'waka_wcms_needs_solutions'],
     ];
     public $morphTo = [];
     public $morphOne = [

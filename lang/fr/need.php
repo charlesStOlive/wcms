@@ -8,6 +8,7 @@ return [
     'state' => 'Etat',
     'main_image' => 'Image',
     'masque' => 'Masque',
+    'solutions' => 'Solutions liées',
     'content' => 'Contenu',
     'title' => 'Gestion besoin',
     'update' => 'Modification besoin',

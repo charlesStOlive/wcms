@@ -2,7 +2,6 @@
 
 use BackendMenu;
 use Backend\Classes\Controller;
-use System\Classes\SettingsManager;
 
 /**
  * Solution Back-end Controller
@@ -25,8 +24,7 @@ class Solutions extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('October.System', 'system', 'settings');
-        SettingsManager::setContext('Waka.Wcms', 'Solutions');
+        BackendMenu::setContext('Waka.Wcms', 'wcms', 'side-menu-solutions');
     }
 
 }

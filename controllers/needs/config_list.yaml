@@ -9,7 +9,7 @@ list: $/waka/wcms/models/need/columns.yaml
 modelClass: Waka\Wcms\Models\Need
 
 # List Title
-title: Manage Needs
+title: waka.wcms::need.title
 
 # Link URL for each record
 recordUrl: waka/wcms/needs/update/:id
@@ -29,11 +29,14 @@ showSetup: true
 # Displays the sorting link on each column
 showSorting: true
 
+
 # Default sorting column
+# defaultSort:
+#     column: created_at
+#     direction: desc
 defaultSort:
     column: sort_order
     direction: asc
-
 # Display checkboxes next to each record
 showCheckboxes: true
 

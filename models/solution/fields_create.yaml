@@ -22,20 +22,6 @@ fields:
         label: waka.wcms::solution.description
         span: full
         type: markdown
-    main_image:
-        label: waka.wcms::solution.main_image
-        span: left
-        type: cloudifileupload
-        mode: image
-        imageHeight: 100
-        imageWidth: 260
-    masque:
-        label: waka.wcms::solution.masque
-        span: right
-        type: cloudifileupload
-        mode: image
-        imageHeight: 100
-        imageWidth: 260
     content:
         label: waka.wcms::solution.content
         span: full

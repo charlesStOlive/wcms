@@ -3,13 +3,15 @@
 use Model;
 
 /**
- * Solution Model
+ * solution Model
  */
+
 class Solution extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\NestedTree;
     use \Waka\Cloudis\Classes\Traits\CloudiTrait;
+    use \Waka\Utils\Classes\Traits\DataSourceHelpers;
 
     /**
      * @var string The database table used by the model.
@@ -29,7 +31,22 @@ class Solution extends Model
     /**
      * @var array Validation rules for attributes
      */
-    public $rules = [];
+    public $rules = [
+        'name' => 'required',
+        'slug' => 'required|unique:waka_cloudis_biblios',
+        'state' => 'required',
+    ];
+
+    public $customMessages = [
+        'name.required' => 'waka.wcms::solution.e.name',
+        'slug.required' => 'waka.wcms::solution.e.slug',
+    ];
+
+    /**
+     * @var array attributes send to datasource for creating document
+     */
+    public $attributesToDs = [
+    ];
 
     /**
      * @var array Attributes to be cast to native types
@@ -39,20 +56,20 @@ class Solution extends Model
     /**
      * @var array Attributes to be cast to JSON
      */
-    protected $jsonable = ['content'];
+    protected $jsonable = [
+        'content',
+    ];
 
     /**
      * @var array Attributes to be appended to the API representation of the model (ex. toArray())
      */
-    protected $appends = [];
+    protected $appends = [
+    ];
 
     /**
      * @var array Attributes to be removed from the API representation of the model (ex. toArray())
      */
-    protected $hidden = [
-        'deleted_at',
-        'sort_order',
-    ];
+    protected $hidden = [];
 
     /**
      * @var array Attributes to be cast to Argon (Carbon) instances
@@ -66,35 +83,72 @@ class Solution extends Model
      * @var array Relations
      */
     public $hasOne = [];
-    public $hasMany = [];
-    public $belongsTo = [];
+    public $hasMany = [
+    ];
+    public $hasOneThrough = [];
+    public $hasManyThrough = [
+    ];
+    public $belongsTo = [
+    ];
     public $belongsToMany = [
-        'needs' => ['Waka\Wcms\Models\Need', 'table' => 'waka_wcms_needs_solutions'],
+        'solutions' => ['Waka\Wcms\Models\Solution', 'table' => 'waka_wcms_needs_solutions'],
     ];
     public $morphTo = [];
-    public $morphOne = [];
-    public $morphMany = [];
+    public $morphOne = [
+    ];
+    public $morphMany = [
+    ];
     public $attachOne = [
         'main_image' => 'Waka\Cloudis\Models\CloudiFile',
+        'masque' => 'Waka\Cloudis\Models\CloudiFile',
     ];
-    public $attachMany = [];
+    public $attachMany = [
+    ];
 
-    public function afterSave()
-    {
-        $this->updateCloudiRelations('attach');
-    }
-    public function afterDelete()
-    {
-        //trace_log("afterDelete");
-        $this->clouderDeleteAll();
-    }
+    /**
+     *EVENTS
+     **/
 
-    public function getRapidLinksAttribute() {
-        $link = [
-            "name" => "Page Web",
-            "href" => url('solution/' . $this->slug),
-            "target" => "_blank"
+    /**
+     * LISTS
+     **/
+    public function listStateOptions()
+    {
+        return [
+            'draft' => 'brouillon',
+            'noPage' => 'Pas de page',
+            'ready' => 'prêt',
         ];
-        return [$link];
     }
+
+    /**
+     * GETTERS
+     **/
+
+    /**
+     * SCOPES
+     */
+
+    /**
+     * SETTERS
+     */
+
+    /**
+     * FILTER FIELDS
+     */
+
+    /**
+     * OTHERS
+     */
+    public function getRapidLinksAttribute()
+    {
+        return [
+            [
+                "name" => "Page Web",
+                "href" => url('solution/' . $this->slug),
+                "target" => "_blank",
+            ],
+        ];
+    }
+
 }

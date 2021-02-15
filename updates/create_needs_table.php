@@ -13,18 +13,12 @@ class CreateNeedsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('slug');
-            $table->string('intro')->nullable();
-            $table->string('catchline')->nullable();
-            $table->string('state')->default('draft');
+            $table->text('intro')->nullable();
             $table->text('description')->nullable();
-            $table->text('description_html')->nullable();
+            $table->string('state')->nullable();
             $table->text('content')->nullable();
-            $table->text('kpi')->nullable();
-            $table->string('icone')->nullable();
-
+            //reorder
             $table->integer('sort_order')->default(0);
-
-            $table->softDeletes();
             $table->timestamps();
         });
     }

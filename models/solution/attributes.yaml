@@ -1,18 +1,18 @@
 # ===================================
-#  List Column Definitions
+#  Form Field Definitions
 # ===================================
 
-columns:
-
+icon: icon-crosshairs
+attributes:
     name:
         label: waka.wcms::solution.name
-        searchable: true
     slug:
         label: waka.wcms::solution.slug
-        searchable: true
+    description:
+        label: waka.wcms::solution.description
+        type: md
     state:
         label: waka.wcms::solution.state
-        searchable: true
     updated_at:
         label: waka.utils::lang.global.updated_at
-        type: timetense
+        type: date-medium

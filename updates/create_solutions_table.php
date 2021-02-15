@@ -14,14 +14,13 @@ class CreateSolutionsTable extends Migration
             $table->string('name');
             $table->string('slug');
             $table->text('description')->nullable();
-            $table->text('description_html')->nullable();
-            $table->string('state')->default('draft');
+            $table->string('state')->nullable();
             $table->text('content')->nullable();
-            $table->integer('parent_id')->nullable();
-            $table->integer('nest_left')->nullable();
-            $table->integer('nest_right')->nullable();
-            $table->integer('nest_depth')->nullable();
-
+            //nested
+            $table->integer('parent_id')->unsigned()->nullable();
+            $table->integer('nest_left')->unsigned()->nullable();
+            $table->integer('nest_right')->unsigned()->nullable();
+            $table->integer('nest_depth')->unsigned()->nullable();
             $table->timestamps();
         });
     }

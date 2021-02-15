@@ -1,16 +1,22 @@
 <div data-control="toolbar">
-    <a href="<?= Backend::url('waka/wcms/needs/create') ?>" class="btn btn-primary oc-icon-plus">
-        Nouveau Need
+    <a href="<?= Backend::url('waka/wcms/needs/create') ?>"
+       class="btn btn-primary oc-icon-plus">
+        <?= e(trans('waka.wcms::need.create')) ?>
     </a>
-
-    <button class="btn btn-danger oc-icon-trash-o" disabled="disabled"
-        onclick="$(this).data('request-data', { checked: $('.control-list').listWidget('getChecked') })"
-        data-request="onDelete" data-request-confirm="Are you sure you want to delete the selected Needs?"
-        data-trigger-action="enable" data-trigger=".control-list input[type=checkbox]" data-trigger-condition="checked"
-        data-request-success="$(this).prop('disabled', 'disabled')" data-stripe-load-indicator>
+    <button class="btn btn-danger oc-icon-trash-o"
+            disabled="disabled"
+            onclick="$(this).data('request-data', { checked: $('.control-list').listWidget('getChecked') })"
+            data-request="onDelete"
+            data-request-confirm="Are you sure you want to delete the selected Needs?"
+            data-trigger-action="enable"
+            data-trigger=".control-list input[type=checkbox]"
+            data-trigger-condition="checked"
+            data-request-success="$(this).prop('disabled', 'disabled')"
+            data-stripe-load-indicator>
         <?= e(trans('waka.utils::lang.global.delete_selected')) ?>
     </button>
-    <a href="<?= Backend::url('waka/wcms/needs/reorder') ?>" class="btn btn-default oc-icon-bars">
+    <a href="<?= Backend::url('waka/wcms/needs/reorder') ?>"
+       class="btn btn-default oc-icon-bars">
         <?= e(trans('waka.utils::lang.global.reorder')) ?>
     </a>
     <?= $this->fireViewEvent('backend.top.index') ?>

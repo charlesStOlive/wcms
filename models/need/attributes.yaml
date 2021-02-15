@@ -1,21 +1,20 @@
 # ===================================
-#  List Column Definitions
+#  Form Field Definitions
 # ===================================
 
-columns:
-
+icon: icon-university
+attributes:
     name:
         label: waka.wcms::need.name
-        searchable: true
     slug:
         label: waka.wcms::need.slug
-        searchable: true
+    intro:
+        label: waka.wcms::need.intro
+    description:
+        label: waka.wcms::need.description
+        type: md
     state:
         label: waka.wcms::need.state
-        searchable: true
     updated_at:
         label: waka.utils::lang.global.updated_at
-        type: timetense
-    sort_order:
-        label: waka.utils::lang.global.sort_order
-        invisible: true
+        type: date-medium

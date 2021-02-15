@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Solution
+name: waka.wcms::solution.form_name
 
 # Model Form Field configuration
 form: $/waka/wcms/models/solution/fields.yaml
@@ -16,16 +16,17 @@ defaultRedirect: waka/wcms/solutions
 
 # Create page
 create:
-    title: Create Solution
+    title: waka.wcms::solution.create
     redirect: waka/wcms/solutions/update/:id
     redirectClose: waka/wcms/solutions
+    form: $/waka/wcms/models/solution/fields_create.yaml
 
 # Update page
 update:
-    title: Edit Solution
-    redirect: waka/wcms/solutions
+    title: waka.wcms::solution.update
+    redirect: waka/wcms/solutions/update/:id
     redirectClose: waka/wcms/solutions
 
 # Preview page
 preview:
-    title: Preview Solution
+    title: waka.wcms::solution.preview_name

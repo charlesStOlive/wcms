@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Need
+name: waka.wcms::need.form_name
 
 # Model Form Field configuration
 form: $/waka/wcms/models/need/fields.yaml
@@ -16,16 +16,17 @@ defaultRedirect: waka/wcms/needs
 
 # Create page
 create:
-    title: Create Need
+    title: waka.wcms::need.create
     redirect: waka/wcms/needs/update/:id
     redirectClose: waka/wcms/needs
+    form: $/waka/wcms/models/need/fields_create.yaml
 
 # Update page
 update:
-    title: Edit Need
-    redirect: waka/wcms/needs
+    title: waka.wcms::need.update
+    redirect: waka/wcms/needs/update/:id
     redirectClose: waka/wcms/needs
 
 # Preview page
 preview:
-    title: Preview Need
+    title: waka.wcms::need.preview_name

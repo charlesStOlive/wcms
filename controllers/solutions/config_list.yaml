@@ -9,7 +9,7 @@ list: $/waka/wcms/models/solution/columns.yaml
 modelClass: Waka\Wcms\Models\Solution
 
 # List Title
-title: Manage Solutions
+title: waka.wcms::solution.title
 
 # Link URL for each record
 recordUrl: waka/wcms/solutions/update/:id
@@ -29,11 +29,18 @@ showSetup: true
 # Displays the sorting link on each column
 showSorting: true
 
-# Display checkboxes next to each record
-showCheckboxes: true
-
 showTree: true
 treeExpanded: true
+
+# Default sorting column
+# defaultSort:
+#     column: created_at
+#     direction: desc
+defaultSort:
+    column: sort_order
+    direction: asc
+# Display checkboxes next to each record
+showCheckboxes: true
 
 # Toolbar widget configuration
 toolbar:

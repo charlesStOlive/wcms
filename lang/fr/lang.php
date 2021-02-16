@@ -75,6 +75,7 @@ return [
         ],
         'carousel' => [
             'name' => "Un carousel",
+            'height' => "Hauteur en px du carousel",
             'description' => "Carousel avec titre",
             'title' => "Titre",
             'text' => "Text",
@@ -83,6 +84,7 @@ return [
         ],
         'carousel_text' => [
             'name' => "Carousel - Texte",
+            'height' => "Hauteur en px du carousel",
             'description' => "Carousel à coté d'un bloc de texte et titre",
             'title' => "Titre",
             'text' => "Text",

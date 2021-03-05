@@ -150,5 +150,4 @@ class Solution extends Model
             ],
         ];
     }
-
 }

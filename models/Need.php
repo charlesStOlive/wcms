@@ -151,5 +151,4 @@ class Need extends Model
             ],
         ];
     }
-
 }

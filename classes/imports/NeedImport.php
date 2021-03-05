@@ -15,7 +15,6 @@ class NeedImport implements ToCollection, WithHeadingRow
     {
         $modelSolutions = Solution::lists('id', 'slug');
         foreach ($rows as $row) {
-
             $need = new Need();
 
             $need->name = $row['name'];

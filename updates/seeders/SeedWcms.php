@@ -15,7 +15,5 @@ class SeedWcms extends Seeder
         // echo '--Need Import' . PHP_EOL;
         // Db::table('waka_wcms_needs')->truncate();
         // Excel::import(new \Waka\Wcms\Classes\Imports\NeedImport, plugins_path('waka/wcms/updates/excels/start_needs.xlsx'));
-
     }
-
 }

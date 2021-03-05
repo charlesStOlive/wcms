@@ -26,6 +26,4 @@ class Needs extends Controller
         parent::__construct();
         BackendMenu::setContext('Waka.Wcms', 'wcms', 'side-menu-needs');
     }
-
 }
-

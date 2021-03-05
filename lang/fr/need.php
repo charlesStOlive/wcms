@@ -17,5 +17,5 @@ return [
     'e' => [
         'name' => 'Le nom est requis',
         'slug' => 'Le champs est requis et doit être unique',
-    ],     
+    ],
 ];

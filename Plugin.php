@@ -40,7 +40,6 @@ class Plugin extends PluginBase
      */
     public function register()
     {
-
     }
 
     /**
@@ -53,7 +52,6 @@ class Plugin extends PluginBase
         // \Waka\Publisher\Controllers\Documents::extend(function ($controller) {
         //     $controller->implement[] = 'Waka.Wcms.Contents.ContentListNeed';
         // });
-
     }
 
     /**
